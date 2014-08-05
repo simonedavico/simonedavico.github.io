@@ -1,0 +1,68 @@
+@import "bootstrap/bootstrap.less";
+@import "fontfaces.less";
+@import "variables.less";
+
+html, body {
+
+  background-color: rgb(7,7,10);
+}
+
+.content {
+  margin-top: 20%;
+  .make-row();
+  .text-center;
+}
+
+.name {
+  .make-sm-column(12);
+  font-family: 'BebasNeue Book', "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 6em;
+  color: white;
+//  border: 1px solid white;
+
+  .first {
+    font-family: 'BebasNeue Bold';
+    color: @myShirtRed;
+  }
+}
+
+.profile-pic {
+  .make-sm-column(12);
+
+  img {
+
+    .square(200px);
+  }
+}
+
+.contacts {
+  color: white;
+  .make-sm-column(12);
+  font-size: 40px;
+
+  .fa {
+    margin: 0 10px 0 10px;
+    opacity: 0.7;
+  }
+
+  .fa:hover {
+    opacity: 1;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .content {
+    margin-top: 10%;
+  }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {  }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {  }
+
+
+
