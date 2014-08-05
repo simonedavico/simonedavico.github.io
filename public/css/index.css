@@ -5897,6 +5897,8 @@ button.close {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
+body:before,
+body:after,
 .content:before,
 .content:after {
   content: " ";
@@ -5917,6 +5919,7 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
+body:after,
 .content:after {
   clear: both;
 }
@@ -6194,6 +6197,24 @@ html,
 body {
   background-color: #07070a;
 }
+body {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body > .navbar-header,
+body > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  body > .navbar-header,
+  body > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 .content {
   margin-top: 20%;
   margin-left: -15px;
@@ -6208,12 +6229,19 @@ body {
   font-family: 'BebasNeue Book', "Helvetica Neue", Helvetica, sans-serif;
   font-size: 6em;
   color: white;
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
 }
 @media (min-width: 768px) {
   .name {
     float: left;
     width: 100%;
   }
+}
+.name:hover {
+  opacity: 1;
 }
 .name .first {
   font-family: 'BebasNeue Bold';
@@ -6252,6 +6280,9 @@ body {
 .contacts .fa {
   margin: 0 10px 0 10px;
   opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
 }
 .contacts .fa:hover {
   opacity: 1;
