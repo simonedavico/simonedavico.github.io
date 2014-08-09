@@ -6794,6 +6794,11 @@ h1 {
 }
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    overflow-y: hidden;
+  }
+}
 .slidedown.ng-enter,
 .slidedown.ng-leave,
 .slideright.ng-enter,

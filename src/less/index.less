@@ -68,7 +68,12 @@ h1 {
 @media (min-width: @screen-md-min) {  }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {  }
+@media (min-width: @screen-lg-min) {
+  body {
+    //fix for windows scrollbar
+    overflow-y: hidden;
+  }
+}
 
 //code for two simple animations
 .slidedown.ng-enter,
