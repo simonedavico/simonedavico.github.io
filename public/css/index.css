@@ -6276,22 +6276,11 @@ button.close {
   background-color: white;
 }
 .side-nav .links .menu .menu-item a span {
-  display: none !important;
   margin-right: 20px;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 767px) {
   .side-nav .links .menu .menu-item a span {
-    display: inline !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .side-nav .links .menu .menu-item a span {
-    display: inline !important;
-  }
-}
-@media (min-width: 1200px) {
-  .side-nav .links .menu .menu-item a span {
-    display: inline !important;
+    display: none !important;
   }
 }
 .side-nav .links .menu .menu-item a .fa {
@@ -6328,6 +6317,16 @@ button.close {
   }
   .side-nav .links .menu .menu-item a {
     text-align: right;
+  }
+}
+@media (min-width: 768px) and (max-width: 767px) {
+  .side-nav .profile {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 991px) {
+  .side-nav .profile {
+    display: none !important;
   }
 }
 /* Medium devices (desktops, 992px and up) */
@@ -6373,15 +6372,19 @@ button.close {
   width: 100% \9;
   max-width: 100%;
   height: auto;
-  display: none !important;
   width: 200px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 767px) {
+@media (min-width: 1200px) {
   .page-container.profile .page .row .placeholder .mobile-profile-pic {
-    display: block !important;
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-container.profile .page .row .placeholder .mobile-profile-pic {
+    display: none !important;
   }
 }
 .page-container.profile .page .row .placeholder .signature {

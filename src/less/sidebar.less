@@ -47,9 +47,11 @@
           }
 
           span {
-            .visible-sm-inline;
-            .visible-md-inline;
-            .visible-lg-inline;
+            .hidden-xs;
+            //.hidden-sm;
+            //.visible-sm-inline;
+            //.visible-md-inline;
+            //.visible-lg-inline;
             margin-right:20px;
           }
 
@@ -86,6 +88,9 @@
       display: block;
       background-image: url("../img/profile.jpg");
       background-size: cover;
+      .hidden-xs;
+      .hidden-sm;
+
     }
 
     .links {
@@ -101,7 +106,7 @@
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {  }
+@media (min-width: @screen-md-min) { }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) {  }
