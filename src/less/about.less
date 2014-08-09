@@ -1,0 +1,70 @@
+@import 'bootstrap/bootstrap.less';
+
+.page-container.about {
+
+  .square(100%);
+
+  .page {
+    position: relative;
+    height: 100%;
+
+    .questions {
+      .make-row();
+      .transition(opacity 0.3s ease-in-out;);
+      opacity: 1;
+
+      .question-container {
+        .make-sm-column(12);
+        //.make-md-column(6);
+        .make-lg-column(4);
+
+        &:hover {
+          opacity: 1;
+
+          & > .question-card {
+            box-shadow: 21px 21px 100px 0px rgba(0,0,0,0.1);
+            //border-color: white;
+            z-index: 2;
+          }
+        }
+
+        .question-card {
+          margin: 10px;
+          border: 1px solid @lightGrey;
+          .transition(all 0.3s ease-in-out;);
+          padding: 35px;
+
+          .btn {
+            .center-block;
+            background-color: black;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:hover {
+              background-color: @lightBlue;
+              color: white;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+@media (min-width: @screen-md-min) {
+  .page-container.about {
+    .btn {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .page-container.about {
+    .btn {
+      width: 100%;
+    }
+  }
+}

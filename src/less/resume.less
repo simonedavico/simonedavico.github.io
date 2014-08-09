@@ -1,0 +1,38 @@
+@import "bootstrap/bootstrap.less";
+
+.page-container.resume {
+
+  .square(100%);
+
+  .page {
+    height:100%;
+
+    .sorry {
+      .make-xs-column(8);
+      .make-xs-column-offset(2);
+
+      h1 {
+        i {
+          font-size: 60px;
+          color: @lightBlue;
+        }
+      }
+
+      h5 {
+        font-weight: 200;
+      }
+    }
+
+    .btn {
+      background-color: @lightBlue;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &:hover {
+        background-color: darken(@lightBlue, 10%);
+      }
+    }
+
+  }
+
+}

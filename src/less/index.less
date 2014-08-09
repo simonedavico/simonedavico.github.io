@@ -1,76 +1,67 @@
 @import "bootstrap/bootstrap.less";
 @import "fontfaces.less";
 @import "variables.less";
+@import "mixins.less";
+@import "sidebar.less";
+@import "profile.less";
+@import "about.less";
+@import "contacts.less";
+@import "resume.less";
+
 
 html, body {
-  background-color: rgb(7,7,10);
+  font-family: "Helvetica Neue",'Raleway',Helvetica,Arial,sans-serif;
+  height: 100%;
 }
 
-body{
-  .container-fluid;
+.content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .the-view {
+    position: absolute;
+    top: 0; left: 0;
+    padding-left: @xsSidebarWidth;
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.light-up() {
-
-  opacity: 0.7;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
+.btn {
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 20px 0 20px 0;
 
   &:hover {
-    opacity: 1;
-  }
-
-}
-
-.content {
-  margin-top: 20%;
-  .make-row();
-  .text-center;
-}
-
-.name {
-  .make-sm-column(12);
-  font-family: 'BebasNeue Book', "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 6em;
-  color: white;
-  .light-up();
-
-
-
-  .first {
-    font-family: 'BebasNeue Bold';
-    color: @myShirtRed;
+    background-color: @lightBlue;
+    color: white;
   }
 }
 
-.profile-pic {
-  .make-sm-column(12);
-
-
-  img {
-
-    .square(200px);
-  }
-}
-
-.contacts {
-  color: white;
-  .make-sm-column(12);
-  font-size: 40px;
-
-  .fa {
-    margin: 0 10px 0 10px;
-    .light-up();
-  }
+h1 {
+  font-weight:100;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
-  .content {
-    margin-top: 10%;
-  }
 
+    .content{
+      padding-left: @smSidebarWidth;
+
+      .the-view {
+        padding-left: @smSidebarWidth;
+
+        .page-container {
+          position: relative;
+
+          .page {
+            .container-fluid;
+          }
+        }
+      }
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -79,5 +70,49 @@ body{
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) {  }
 
+//code for two simple animations
+.slidedown.ng-enter,
+.slidedown.ng-leave,
+.slideright.ng-enter,
+.slideright.ng-leave,
+.slideup.ng-enter,
+.slideup.ng-leave
+{
+  .transition(all 1s ease;);
+}
 
 
+.slidedown.ng-enter {
+  .transform(translateY(-100%););
+}
+.slidedown.ng-enter-active,
+.slidedown.ng-leave {
+  .transform(translateY(0););
+}
+.slidedown.ng-leave-active {
+  .transform(translateY(+100%););
+}
+
+
+.slideup.ng-enter {
+  .transform(translateY(100%););
+}
+.slideup.ng-enter-active,
+.slideup.ng-leave {
+  .transform(translateY(0););
+}
+.slideup.ng-leave-active {
+  .transform(translateY(-100%););
+}
+
+
+.slideright.ng-enter {
+  .transform(translateX(-100%););
+}
+.slideright.ng-enter-active,
+.slideright.ng-leave {
+  .transform(translateX(0););
+}
+.slideright.ng-leave-active {
+  .transform(translateX(100%););
+}

@@ -1,0 +1,107 @@
+/* Sidebar */
+.side-nav {
+  border-right: solid 1px @lightGrey;
+  position: fixed;
+  width: @xsSidebarWidth;
+  .transition(width 0.1s ease-in-out;);
+  top: 0; left: 0;
+  height: 100%;
+  z-index: 5;
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+
+  .profile {
+    display:none;
+  }
+
+  .links {
+    .menu {
+
+      font-weight: 600;
+
+      list-style: none;
+      .menu-item {
+        border-bottom: 1px solid @lightGrey;
+        position: relative;
+
+        &:hover {
+          & .fa {
+            color: @lightBlue;
+          }
+        }
+
+        &.active {
+          & a:after {
+            opacity:1;
+            visibility: visible;
+          }
+        }
+
+        a {
+          color: @black;
+          padding: 18px;
+
+          &:hover {
+            background-color: white;
+          }
+
+          span {
+            .visible-sm-inline;
+            .visible-md-inline;
+            .visible-lg-inline;
+            margin-right:20px;
+          }
+
+          .fa {
+            color: darken(@lightGrey,20%);
+            font-size: 13px;
+          }
+
+          &:after {
+            position: absolute;
+            top: 0; right: -3px;
+            height: 100%;
+            width: 3px;
+            content: " ";
+            opacity: 0;
+            visibility: hidden;
+            .transition(all 0.1s ease-in-out;);
+            background-color: @lightBlue;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+  .side-nav {
+    width: @smSidebarWidth;
+
+    .profile {
+      .square(@smSidebarWidth);
+      display: block;
+      background-image: url("../img/profile.jpg");
+      background-size: cover;
+    }
+
+    .links {
+      .menu {
+        .menu-item {
+          a {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {  }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {  }

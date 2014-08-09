@@ -1,0 +1,39 @@
+<div class="page-container contacts">
+    <div class="page">
+        <div class="map">
+
+            <div class="info">
+                <div class="info-inner">
+                    <h1><i class="fa fa-comments-o"></i></h1>
+                    <h1>Get in touch with me!</h1>
+                    <address class="location">
+                        <i class="fa fa-map-marker"></i> <strong>Simone D'Avico</strong><br>
+                        <span>{{contacts.street}}</span><br>
+                        <span>{{contacts.city}}</span><br>
+                    </address>
+                    <address class="phone">
+                        <i class="fa fa-phone"></i> <span>{{contacts.phone}}</span><br>
+                    </address>
+                    <address class="email">
+                        <i class="fa fa-paper-plane"></i> <span>{{contacts.email}}</span><br>
+                    </address>
+                    <div class="social">
+                        <h5>Check my social media!</h5>
+                        <div class="buttons">
+                            <a ng-repeat="media in contacts.socialMedia" ng-href="{{media.link}}" class="btn">
+                                <i class="fa" ng-class="media.icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <google-map center="contacts.map.center" zoom="contacts.map.zoom"
+                            draggable="contacts.map.draggable" options="contacts.map.options">
+                    <marker coords="contacts.marker.coords" options="contacts.marker.options" idkey="contacts.marker.id" ></marker>
+                </google-map>
+            </div>
+
+        </div>
+    </div>
+</div>

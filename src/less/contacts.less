@@ -1,0 +1,200 @@
+@import "bootstrap/bootstrap.less";
+@import "mixins.less";
+
+.page-container.contacts {
+
+  .square(100%);
+
+  .page {
+    height: 100%;
+
+    .links, .map {
+      .make-row();
+    }
+
+    .links {
+      height: auto;
+
+
+    }
+
+    .map {
+      height: 100%;
+      position: relative;
+
+      .info {
+        position: absolute;
+        height: 100%; width: 100%;
+        top: 0; left: 0;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 3;
+        color: white;
+        padding: 25px;
+
+        .info-inner {
+          position:relative;
+          .square(100%);
+
+          .social {
+            padding-top: 20px;
+            border-top: solid 1px @transparentBlack;
+
+            position:absolute;
+            width:100%;
+            bottom:10%;
+            left:0;
+
+            .buttons {
+
+              .btn {
+                border-color: @transparentBlack;
+                background:none;
+                padding-left: 10px;
+                padding-right:10px;
+                margin-left: 2px;
+                margin-right:2px;
+                border-radius: 2px;
+
+                .fa {
+                  font-size:20px;
+                  color:rgba(255,255,255,0.2);
+                  .transition(all 0.3s ease-in;);
+                }
+
+                &:hover {
+                  border-color: white;
+                }
+
+                &:hover .fa {
+                  .transform(rotateY(360deg););
+
+                  &.fa-facebook{
+                    color: @facebookBlue;
+                  }
+
+                  &.fa-twitter {
+                    color: @lightBlue;
+                  }
+
+                  &.fa-google-plus {
+                    color: @googlePlusRed;
+                  }
+
+                  &.fa-codepen, &.fa-github {
+                    color: white;
+                  }
+
+                  &.fa-stack-overflow {
+                    color: @stackOverflowOrange;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+
+        h1 {
+          font-size: 50px;
+
+          .fa {
+            font-size: 80px;
+          }
+        }
+
+        & .fa {
+
+          color: @lightBlue;
+        }
+
+        & address {
+          margin-left: 12px;
+          margin-top: 25px; margin-bottom: 25px;
+          &.location {
+            span {
+              font-size: 11px;
+            }
+          }
+
+          &.phone, &.email {
+            span {
+              font-size: 12px;
+            }
+          }
+
+          .fa {
+            margin-left: -12px;
+          }
+        }
+      }
+
+      .map-container {
+        .square(100%);
+        z-index: 2;
+
+        .angular-google-map {
+          .square(100%);
+
+          .angular-google-map-container {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: @screen-md-min) {
+
+  .page-container.contacts {
+
+    .page {
+
+      .links {
+        height: 50%;
+      }
+
+      .map {
+        .info {
+          width: 65%;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: @screen-lg-min) {
+
+  .page-container.contacts {
+
+    .page {
+
+      .links {
+        //height: 50%;
+      }
+
+      .map {
+
+        .info {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+//maps stuff
+.gm-style-iw * {
+  display: block;
+  width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+  margin: 0;
+  padding: 0;
+}
+.gm-style-iw a {
+  color: #4272db;
+}

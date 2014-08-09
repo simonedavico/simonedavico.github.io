@@ -1,29 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+<html ng-app="davico.simone.webpage">
+<head lang="en">
+    <meta charset="UTF-8">
     <title>Simone D'Avico</title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/css/index.css" />
 </head>
+<body ng-controller="MainController as main">
 
-<body>
+    <header class="side-nav">
+        <div class="profile"></div>
+        <nav class="links">
+            <ul class="menu nav">
+                <li id="profile" class="menu-item" nav-item="">
+                    <a href="#profile">
+                        <span>Profile</span>
+                        <i class="fa fa-male"></i>
+                    </a>
+                </li>
+                <li id="about" class="menu-item" nav-item="">
+                    <a href="#about">
+                        <span>About Me</span>
+                        <i class="fa fa-info-circle"></i>
+                    </a>
+                </li>
+                <li id="resume" class="menu-item" nav-item="">
+                    <a href="#resume">
+                        <span>Resume</span>
+                        <i class="fa fa-list"></i>
+                    </a>
+                </li>
+                <li id="contacts" class="menu-item" nav-item="">
+                    <a href="#contacts">
+                        <span>Contacts</span>
+                        <i class="fa fa-phone"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="content">
-        <div class="profile-pic">
-            <img class="img-circle" src="public/img/profile.jpg" alt="profile-pic">
-        </div>
-        <div class="name">
-            <span class="first">S</span>IMONE
-            <span class="first">D'</span>AVICO</div>
-        <div class="contacts">
-            <i class="fa fa-university"></i>
-            <i class="fa fa-send"></i>
-            <i class="fa fa-codepen"></i>
-            <i class="fa fa-github"></i>
-            <i class="fa fa-stack-overflow"></i>
-
-        </div>
+        <div ng-view class="the-view" ng-class="main.effect"></div>
     </div>
-</body>
 
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script type="text/javascript" src="src/js/app.js"></script>
+    <script type="text/javascript" src="src/js/modules/nav.js"></script>
+    <script type="text/javascript" src="src/js/modules/utilities.js"></script>
+</body>
 </html>

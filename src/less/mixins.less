@@ -1,0 +1,26 @@
+/* Useful mixins */
+.transition(@transition) {
+  transition: @transition;
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -ms-transform: @transform;
+  transform: @transform;
+}
+
+.light-up() {
+
+  opacity: 0.7;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
