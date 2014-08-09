@@ -20,7 +20,7 @@ angular.module('davico.simone.webpage.utilities', [])
     this.media = [
         { icon: 'fa-facebook', link: 'https://www.facebook.com/simonedavico' },
         { icon: 'fa-twitter', link: 'https://www.twitter.com/simonedavico'},
-        { icon: 'fa-google-plus', link: 'https://plus.google.com/+SimoneDAvico'},
+        { icon: 'fa-google-plus', link: 'https://plus.google.com/+SimoneDAvico?rel=author'},
         { icon: 'fa-codepen', link: 'http://codepen.io/simonedavico/'},
         { icon: 'fa-github', link: 'http://github.com/simonedavico'},
         { icon: 'fa-stack-overflow', link: 'http://stackoverflow.com/users/3301102/link'}
