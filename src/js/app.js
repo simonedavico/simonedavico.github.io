@@ -60,7 +60,7 @@ angular.module('davico.simone.webpage', [
                 controller: function(MapData, SocialMedia){
                     this.street = 'Via Vignola 14';
                     this.city = 'Lugano, 6900';
-                    this.phone = '+41 76 277 2417';
+                    this.phone = '+39 349 171 2417';
                     this.email = 'simonedavico (at) gmail (dot) com';
 
                     this.socialMedia = SocialMedia.media;
